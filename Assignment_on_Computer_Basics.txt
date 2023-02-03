@@ -1,0 +1,42 @@
+Assignment on Computer Basics
+
+What is Computer ?
+Computer is a machine which accepts the information in digitised form and processes it in 
+accordance with a variable programme, piece of software or set of instructions that 
+specifies how the information would be handled. 
+
+What is RAM?
+RAM is volatile primary memory.  Data would be store in this memory while computer is 
+running but vanishes it at a fraction of power off.
+
+Where is data stored in computer?
+In computer data is stored in Hard Disc Drive (HDD).
+
+What is that input device used to type text and numbers on a document in the computer 
+system?
+In the computer system keyboard is used to type text and numbers on a document.
+
+What are the output devices?
+The output devices are:
+->Monitor
+->Printer
+->Speaker
+
+Which is the input device that allows a user to move the cursor or pointer on the screen?
+Mouse is an input device that allows user to move the cursor on the screen.
+
+Which language is directly understood by the computer without a translational program?
+Binary language is directly understood by the computer without a translational program.
+
+What are input devices?
+The input devices are:
+	Keyboard
+	Mouse
+	joystick
+
+
+
+
+
+
+

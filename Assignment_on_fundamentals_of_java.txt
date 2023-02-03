@@ -1,0 +1,52 @@
+Assignment on Fundamentals of Java
+
+What is Programming Language?
+-> Making the set of instructions to a computer that specifies how to carry out a task this
+   process is known as programming and the language used to make instructions is known as 
+   programming language.
+
+Why do we need a programming language?
+->In our daily life we need programming language to enhance and increase the power of 
+computers, mobile solutions and internet. There are numerous example you may come to know 
+when you are going to learn a programming language. 
+		Now a days not just for academics but in our daily life to all programming is done. 
+For example you can conduct online banking, Purchase your ticket while travelling by train 
+or aeroplane. This all and many more are possible due to programming language so that’s why 
+we need programming language.
+
+What are the features of java?
+->There are as many features that java provides like:
+•	Simple to understand 
+•	Platform independent
+•	Portable
+•	Robust and secure
+•	It supports multithreaded programs
+•	Object oriented
+•	Distributed 
+
+What is an object?
+->Object is an real world entity which has its own states and behaviour.
+	Where,
+		States: represents an object data (value)
+		Behaviour: represents how an object behaves.
+
+What is a class?
+->Class is a blueprint from which object is created.
+
+Explain about the main method in java?
+->Syntax for the main method in java is:
+public static void main (String []args)
+here,
+	public- it is a access specifier we have to use it before the main    method so jvm let
+			to know from where programm being executed.
+	Static-we have to make main method static due to this jvm no need any object to call 
+		   method because static method are the methods which don’t require object to invoke
+		   them
+	Void-it is return type which tell compiler that the main method not return any value.
+	Main- it is a method name which is predefined in jvm and invoke to execute the code line
+ 		  by line and end the execution after completion of this method. We can overload the
+		  main method.
+	String args[]- here args is an array name and it is of string type.the main method 
+				   accepts the information from user by command line.to store that 
+				   information this array is used.
+

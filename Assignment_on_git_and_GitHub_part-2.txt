@@ -1,0 +1,40 @@
+Assignment on git and GitHub part-2 
+
+How to check if git is available on your system?
+->I will open the Gitbash and simply executing the ‘git version’ command there so it will 
+display the version of git if available otherwise not. In this way I will check.
+
+How to initialize a new git repository?
+->Open the specific folder or file where we want to create a repository then open there 
+Gitbash and execute ‘git init ’ command in this way we initialize a new git repository.
+
+How to tell git about your name and email?
+-> By using below command we can tell git our name and email:
+git config --global user.name “our_name”
+git config --global user.Email “our_Email” 
+
+How to add a file to the staging area?
+-> By using below command we can add a file to the staging area:
+git add <file_name.java>  [when we want to add single file]
+git add .   [when we want to add all file which is present in working   area]
+
+How to remove a file from the staging area?
+->By using below command we can remove a file from staging area:
+git rm --cached <file name> 
+How to make a commit?
+->By using command below we can make a commit:
+git commit -m “commit massage”
+
+How to send your changes to a remote repository?
+->First of all go to the specific branch of our local repository where we made some changes
+ to do so execute the command “git checkout branch_name” then execute the below command:
+git remote add remote_name remote_url
+git push remote_name branch_name
+when we send our changes first time to a remote repository in this way we are able to send 
+our changes to a remote repository.
+
+What is the difference between clone and pull?
+->while going with the clone we are able to copy the entire remote repository in our working
+ directory but when we go with pull we can only fetch the latest changes made in remote 
+ repository to our working directory.
+ 

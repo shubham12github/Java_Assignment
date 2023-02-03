@@ -1,0 +1,40 @@
+Assignment on git and GitHub
+
+What is Git?
+->Git is a popular version control system created by Linus Torvalds. Mainly used for 
+tracking the code changes as well as who made changes and making the coding collaboration 
+with developers.
+
+What do you understand by the term “version control system”?
+->It is a system that records the changes to a file or set of file over a time so that we 
+can recall specific version of file later.
+
+What is GitHub?
+->It is a cloud space storage majorly provides the services like storing and hosting of the
+ source code.
+
+Mention some popular git hosting services?
+->Git hosting services are: GitHub, BitBucket, Gitlab, Gitblit etc.
+
+Different types of version control systems.
+->There are three types of version control systems:
+	1.Local Version Control System
+	2.Centralized Version Control System
+	3.Distributed Version Control System
+
+
+
+What benefits come with using git?
+->There are several benefits like
+1. We are at the position where developers can collaborate with each other while working.
+2. No more risk of loosing the information
+3. We can maintain every version of file so that we can recall the specific file version 
+   whenever we want easily.
+
+What is a Git Repository?
+->It is a place where we can store our source code information.
+
+How can you initialize a repository in Git?
+->By using ‘ git init ’ command we can initialize a git repository.
+
+ 
