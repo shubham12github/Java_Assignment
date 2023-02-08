@@ -1,0 +1,68 @@
+Assignment on Java Variables and Data Types
+
+1.What is statically typed and dynamically typed programming language?
+-> Statically type: The languages in which memory to the variable is provided at compilation time itself 
+   such languages are called statically type programming language.
+   Dynamically type: The languages in which memory to the variable is provided at execution time itself 
+   such languages are called dynamically type programming language.
+
+2.What is the variable in java?
+-> Variable is the name of reserve region allocated in memory and whose value should be varies during the 
+   programm execution.
+   Syntax followed in java to declare variable is:
+   Type Variable_name = value ;
+   here,
+	Type-inducates the type of data stored in variable
+	Variable_name-indicates the name of the variable
+	value-indicates the value stored.
+
+3.How to assign a value to variable?
+-> value should be assign to variable by specifying a value followed by equal sign like " Type Variable_name = value"
+   for eg. int a = 10 ;
+
+4.What are primitive data types in java?
+-> The data type which are predefined in language and is named by reserve keyword.
+there are 'eight' primitive data types in java like byte, short, int, long, float, double, boolean, char.
+
+5.What are the identifiers in java?
+-> an identifiers is the name given to package, class, variable, method, interface like this. Identifiers name must be 
+unique.while dealing with identifiers name we must follow the different rule like:
+	a.an identifier should begin with letters (A..Z or a..z), $ and _ and should be unique
+	b.a keyword can't be used as identifier name.
+	c.identifiers are case sensitive
+	d.white spaces are not allowed in the indentifiers name.
+
+6.List the operators in java?
+-> Below is the list of operators in java:
+	> Arithmatic operators
+	> Logical operator
+	> Relational operator
+	> Unary operator
+	> Assignment operator
+	> Bitwise operator
+
+7.Explain about increament and decreament operators and give an example?
+-> Increament operators : it will increase the value by one number in that there are two types one is preincreament
+   like (++a) which increase the value first then use it and other is postincreament (a++) which use the value first then 
+   increase it.
+   Decreament operators: it will decrease the value by one number in that also there are two types one is predecreament
+   (--a) which decrease the value first then use and other is postdecreament (a--) which use value first then decrease it.
+		for example- class Main {
+ 					 public static void main (String args[]) {
+							int a = 12;
+							int b = a++;
+							System.out.println(a);	//13
+							System.out.println(b);	//12
+							b = ++a;
+							System.out.println(a);	//14
+							System.out.println(b);	//14
+							b=a--;
+							System.out.println(a);	//13
+							System.out.println(b);	//14
+   							b=--a;
+							System.out.println(a);	//12
+							System.out.println(b);	//12
+							
+							}
+
+						}

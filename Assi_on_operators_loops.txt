@@ -1,0 +1,68 @@
+Assignment on Operators and Loops
+
+1.What are the conditional operators in java?
+-> We have three types of conditional operators in java which mentioned below:
+	1.Logical-and (&&)
+	2.Logical-or (||)
+	3.Ternary operator (?:)
+  This operators are used to combine two or more boolean expressions.
+
+2.What are the types of operators based on the number of operands?
+-> In java there are three types of operators based on the number of operands.
+    1.Unary operator:It deals with the single operands eg.Increament and Decreament operators
+	2.Binary Operator:It deals with the two operands eg.addion, subtraction,conditional operators
+	3.Ternary opertaor (?:) which deals with three operands
+
+3.What is the use of Switch case in java programming?
+-> let's assume one scenario in which we have a one variable and now we want to do multiple operations on it based upon the 
+   value stored in it in such scenario we use the switch case. it work similer to if else-if ladder statement.
+
+4.What is the syntax of if-else statement?
+-> if ( expression ) {
+		//code
+		}
+	else {
+		//code
+	}
+
+5.What are the three iterative statements in java?
+-> 1.for loop
+   2.While loop
+   3.do-while loop
+
+6.What are the priority levels of arithmetic operation in java?at 
+-> i have mentioned the priority level of arithmetic operation in java below:
+   {} Curly bases-->[] Square bases-->() Paranthesis-->% Module-->/ Division-->* Multiplication-->+ Addition-->- Subtraction
+
+7.What are the conditional statement and use of conditional statements in java?
+--> There are five types of conditional statements in java which are mentioned below:
+	1.If statement
+	2.If-else statement
+	3.If-else if ladder statement
+	4.Nested if-else  
+	5.Switch case
+	This are the conditional statements which is used in java to control the flow of the program.
+
+8.Write the difference between for loop and do-while loop?
+--> for loop: a.recommeded to use when no of iteration is fixed.
+			  b.iterates a part of program multiple times
+	do-while loop:a.recommended to use when no of iteration is not fixed.
+				  b.execute a part of program at least once without checking the condition and then iterates only when 
+					expression returns true.
+
+9.Write a program to print no from 1 to 10?
+--> package com.pw.assignment;
+
+	public class PrintNoFrom1_10 {
+
+	public static void main(String[] args) {
+		int i;
+		System.out.println("print the no from 1 to 10"+" ");
+		for ( i= 1;i<=10;i++) {
+	
+			System.out.println(i);
+		}
+
+	}
+
+}
