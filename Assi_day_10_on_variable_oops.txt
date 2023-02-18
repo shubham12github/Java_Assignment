@@ -1,0 +1,54 @@
+1.How to create an object in java?
+--> In java Object are created by using the new operator followed with class constructor.
+	for eg.'class Test' the object of this class is created in following way:
+			Test t = new Test();
+				here,
+					t- referencce of Test class which store the address of the object.
+					new Test()- this is the object
+
+2.What is the use of new keyword in java?
+--> In java new keyword is used to create the object. 
+
+3.What are the different types of variables in java?
+--> Based on value represented by a variable all variables are divided into two types
+	like, 1.Primitive Variable
+		  2.Reference Variable
+	Classification of the variable is also done on the basis of the behaviour and position of
+	declaration in following manner
+		1.Instance variable-declare inside class but outside block like method,constructor
+		2.Local variable-declare inside block like method
+		3.Static variable-instance variable with satic keyword are called static variable
+
+4.What is the difference between instance variable and local variable?
+--> Instance Variable- 1.Declare within the class but outside a block like method
+					   2.Scope is everywhere inside the class
+					   3.Stored in heap memory and associated with the object
+	Local Variable- 1.Declare within the block and scope is also a perticular block itself
+					2.Stored in Stack memory
+
+5.In which area memory is allocated for Instance variable and local variable?
+--> Instance variable are stored in heap memory area and the local variable are stored in
+	stack memory area.
+
+6.What is method overloading?
+--> Method overloading- In a class when we write the multiple method with same name and at 
+						compile time itself decides like which method should invoke this 
+						phenomenon is called as method overloading.
+	for eg. class Test {
+				void m1() {
+					System.out.println("Zero argument method");
+				}
+				void m1(int i) {
+					System.out.println("int argument method");
+				}
+				public static void main(String[] args) {
+					Test t = new Test();
+					t.m1();		// Zero argument method
+					t.m1(1);	// int argument method
+				}
+			}
+
+	We can do the method overloading in three way:
+	1.Type of parameter
+	2.No of parameter
+	3.Sequence of parameter
