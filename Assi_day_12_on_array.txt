@@ -1,0 +1,67 @@
+1.What do you mean by an array?
+--> Array is index collection of fixed no of homogeneous data elements.In array a single variable stores the multiple value 
+so increases the readability of programm. 
+
+2.How to create an array?
+--> Array are created in two ways:
+First one is:-
+int a[]={5,2,3,4};  following this shortcut way we can create the array.
+
+Second one is:- We can declare the array first then construct and finally initialize it
+I.Declaration
+int a[];
+
+II.Construction
+int a[] = new int[3];
+here,we use new keyword because in java array is treated as object.while constructing size specification is compulsory.
+
+III.Initialization
+int a[] = new int [3];
+a[0]=5;
+a[1]=2;
+a[2]=3;
+a[3]=4;
+
+
+3.Can we change the size of an array at runtime?
+--> We can not change the size of an array at runtime.
+
+4.Can you declare an array without assigning the size of an array?
+--> Yes,We can declare an array without assigning the size of an array but we have to specify its size before using it.
+
+5.What is the default value of an array?
+--> In java array is treated as object so default value for the array element is provided by the JVM depending on the type of
+data stored in it.
+for eg. int a[] =new int [2];
+		System.out,println(a[0]);	// 0
+		here,output is integer value because in this array int type of data is stored.
+
+
+6.What is a 1D array with an example?
+--> A single dimensional array is group of elements having the same data type which are stored in a linear arrangement under a
+single variable name.
+for eg.int a[]={5,2,7,6};
+			Here,
+				'a[]' is array of integer type which store the integer value like 5,2,7 and 6 in linear arrangement under 
+				variable 'a'. 
+
+7.Write a programm on a 2-D array?
+--> package com.shubham.core.java;
+	
+	public class Array {
+		
+		public static void main(String args[]) {
+			
+			int a[][]={ {5,6,4},{8,7,1},{2,3,5},{5,6,8} };
+		
+			for ( int n[]:a ) {
+		
+				for ( int d:n ) {
+
+					System.out.print(d+" ");
+				}
+				System.out.println();
+			}
+
+		}
+	}

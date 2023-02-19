@@ -1,0 +1,85 @@
+1.What is the default value of array for different data types?
+--> Default value of the array for various data types  depends on data stored in it are as follows:
+int a[] - '0'
+byte a[]-'0'
+short a[]-'0'
+long a[]-'0'
+float a[]-'0.0'
+double a[]-'0.0'
+char a[]-'\u000-Unicode value'
+boolean a[]-'false'
+String a[]-'null'
+Object a[]-'null'
+
+2.Can you pass the negative number in array size?
+--> we can not pass the negative number in array size else we try then it leads to the result which shows the 
+'negativearraysizeException'.
+
+3.Where does array stored in JVM memory?
+--> In java array are treated as object so it will stored in heap memory area.
+
+4.What are the disadvantages of the array?
+--> 1.we can not change the size of array once it created.
+	2.It store only homogeneous type of data.
+These two are the bigger disadvantages of the array.
+
+5.What is an Anonymous array in java? give an example.
+--> Anonymous array are the array which has no name and used for instance use only.
+for eg. package com.shubham.core.java;
+
+			//Anonymous array
+	
+		class Calc	{
+		
+			int add(int nums[]) {
+			
+				int result=0;
+				for ( int n:nums) {
+					 result=result+n;
+				}
+				return result;
+			}
+		}
+
+		public class ArrayLec3 {
+	
+	
+			public static void main(String[] args) {
+		
+				Calc obj= new Calc();
+		
+				int result=obj.add(new int[]{5,3,6,7});
+				System.out.println(result);
+			
+			}
+		}
+In the above code we pass array instead of numbers this type of array are called Anonymous array.
+
+6.What are the different ways to traverse an array in java?
+--> There are two way to traverse an array in java as follows:
+1.By using traditional for loop:-
+	int a[] = {5,4,2};
+	for (int i=0;i<a.length;i++ ) {
+		System.out.print(a[i]+" ");
+	}
+
+2.By using Enhanced for loop:-
+	int a[]={5,4,2};
+	for ( int n:a) {
+		System.out.print(n);
+	}
+
+7.What is the difference between length and length() method give an examples?
+--> length:-
+		This is the property by using this we can calculate the length of the array.
+		for eg.
+			int a[]={5,7,9,6};
+			System.out.println(a.length);	// 4
+		This snippets gives we output as '4' which is length of this array.
+
+	length ():-
+		This is method of the String class which gives the length of the string.
+		for eg.
+			String s= "Shubham";
+			System.out.println(s.length());
+		This snippets gives we output as '7' which is length of the string.
