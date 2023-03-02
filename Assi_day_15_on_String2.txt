@@ -1,0 +1,155 @@
+1.Write a simple string programm to take input from user
+-->
+package com.pw.assignment;
+
+import java.util.Scanner;
+
+public class StringAssi {
+
+	public static void main(String[] args) {
+		
+		// Write a simple string program to take input from user
+		
+		Scanner sc=new Scanner(System.in);
+		System.out.println("Enter the string");
+		String s=sc.next();
+		System.out.println(s);
+		
+
+	}
+
+}
+
+2.How do you concatenate two strings in java? give an example?
+--> we concatenate two strings in java in two ways.
+I.By using inbuilt concat() method:
+for eg.
+String s="Shubham";
+String s1="Talke";
+s=s.concat(s1);
+System.out.println(s);// ShubhamTalke
+
+II.By using plus(+) operator:
+for eg.
+String s="Shubham";
+String s1="Talke";
+s=s+s1;
+System.out.println(s);// ShubhamTalke
+
+3.How do you find the length of a string in java explain with an example?
+--> We can find the length of string in java by using inbuilt length() method.This method returns the int value which is 
+equal to the chracter present in given string.Whitespaces are also counted by length() method.
+for eg.
+String s="Shubham";
+System.out.println(s.length());		// 7
+here,
+we got the output as '7' because of the seven characters are present in string 's'.
+
+
+4.How do you compare two strings in java? Give an example
+--> In java two strings are compared in two ways.
+I.By using '==' operator:
+it compares two string on the basis of address holding by its references.it gives we boolean result returns true when 
+references of two strings holding the same address otherwise returns false.
+for eg.
+case-1:-
+String s="Shubham";
+String s1="Shubham";
+System.out.println(s==s1);		//true
+here, 
+when we create the string object using literal as "Shubham" so object is created in SCP and reference given to reference
+variable 's'.In next time also we use same literal that's why rather than creating new object existing object reference 
+given to reference variable 's1' also due to that we got o/p as true. 
+
+
+case-2:-
+String s="Shubham";
+String s1=new String("Shubham");
+System.out.println(s==s1);		//false
+here,
+we create the string object using literal it will created in SCP but in next line we create string object using new keyword
+so object created in heap memory means two references refering to two different objects that's why we got o/p as false.
+
+II.By using Inbuilt equals() method:
+It compares two strings on the basis of content stored in string object.returns true if both strings content are same
+otherwise false.
+for eg.
+String s="Shubham";
+String s1= new String("Shubham");
+System.out.println(s==s1);		//true
+here, two objects content are same which is "Shubham" due to this we got true.
+
+
+
+5.Write a programm to find the length of the string "refrigerator"
+-->
+package com.pw.assignment;
+
+public class StringAssi {
+
+	public static void main(String[] args) {
+		
+		String s="refrigerator";
+		System.out.println(s.length());			//12
+
+	}
+
+}
+
+
+6.Write a programm to check if the letter 'e' is present in the word 'Umbrella'
+-->
+package com.pw.assignment;
+
+public class StringAssi {
+
+	public static void main(String[] args) {
+		
+		boolean flag=false;
+		String s="Umbrella";
+		for(int i=0;i<s.length();i++) {
+			char ch=s.charAt(i);
+			if(ch=='e') {
+				System.out.println("letter 'e' is present");
+				flag=true;
+				break;
+			}
+		}
+		if(flag==false) {
+			System.out.println("letter 'e' is not present");
+		}
+	}
+}
+
+
+7.Write a programm to delete all consonants from the string "Hello,have a good day"
+-->
+package com.pw.assignment;
+
+public class StringAssi {
+
+	public static void main(String[] args) {
+		String s="Hello,have a good day";
+		String s1=s.toLowerCase();
+
+		for(int i=0;i<s1.length();i++) {
+			char ch =s1.charAt(i);
+			if(ch=='a'|| ch=='e'|| ch=='i'|| ch=='o'|| ch=='u'|| ch==' '|| ch==',') {
+				continue;
+				
+			}
+			s1=s1.replace(ch, ' ');
+			
+		
+		}
+		
+		System.out.println(s1);				// e  o, a e a  oo   a 
+	}
+}
+
+
+
+
+
+
+

@@ -1,0 +1,405 @@
+1.Write a programm to remove duplicates from String? (Take any string example with duplicates character)
+-->
+package com.pw.assignment;
+
+
+
+public class StringAssi {
+
+	public static void main(String[] args) {
+
+
+		String s= "Shubham Talke";
+		
+		String s1="";
+		
+		for (int i=0;i<s.length();i++) {
+			boolean flag=false;
+			for (int j=i+1;j<s.length();j++) {
+				if (s.charAt(i)==s.charAt(j)) {
+					flag=true;
+					break;
+				}
+				
+			}
+			if(flag==false) {
+				s1=s1+s.charAt(i);
+			}
+		}
+		System.out.println(s1);
+		
+	}
+
+}
+
+
+2.WAP to print duplicates characters from the string?
+-->
+package com.pw.assignment;
+
+
+public class StringAssi {
+
+	public static void main(String[] args) {
+
+		String s="Shubham Talke";
+		
+		String s1="";
+		System.out.println("Duplicates characters in the given string are : ");
+		for (int i=0;i<s.length();i++) {
+			char ch = s.charAt(i);
+			
+			int idx=s.indexOf(ch, i+1);
+			
+			if (idx!= -1) {
+
+				System.out.println(ch);
+			}
+		}
+	}
+}
+
+
+3.WAP to check if "2552" is palindrome or not.
+-->
+package com.pw.assignment;
+
+
+public class StringAssi {
+
+	public static void main(String[] args) {
+
+		String s="2552";
+		String s1="";
+		
+		for (int i=s.length()-1;i>=0;i--) {
+			
+			s1=s1+s.charAt(i);
+		}
+		
+		if (s.equals(s1)) {
+			System.out.println("Given string is palindrome");
+		}
+		else {
+			System.out.println("Given string is not a palindrome");
+		}
+		
+	}
+}
+
+
+4.WAP to count the number of consonants,vowels,special characters in a string.
+-->
+package com.pw.assignment;
+
+
+public class StringAssi {
+
+	public static void main(String[] args) {
+
+		String s="Java2901#%-.ogi";
+		s=s.toUpperCase();
+		int consonants=0;
+		int vowels=0;
+		int spcharacter=0;
+		for(int i=0;i<s.length();i++) {
+			char ch =s.charAt(i);
+			if(ch>=65 && ch<=90 ) {
+				
+				if(ch=='A' || ch=='E' || ch=='I' || ch=='O' || ch=='U' ) {
+					vowels++;
+				}
+				else {
+				
+					consonants++;
+				}
+			}
+			else if (!(ch>=65 && ch<=90) && !(ch>=48 && ch<=57)){
+				spcharacter++;
+			}
+		}
+		System.out.println("Total vowels in the given string are "+vowels);						// 4
+		System.out.println("Total consonants in the given string are "+consonants);				// 3
+		System.out.println("Total special characters in the given string are "+spcharacter);	// 4
+	}
+}
+
+
+5.WAP to implement anagram checking least inbuilt method being used.
+-->
+package com.pw.assignment;
+
+
+public class StringAssi {
+
+	public static void main(String[] args) {
+
+		String s="School Master";
+		String s1="The Classroom";
+		String s2="";
+		String s3="";
+		
+		for (int i=0;i<s.length();i++) {
+			char ch=s.charAt(i);
+			if (ch==' ') {
+				continue;
+			}
+			s2= s2+ch;
+		}
+		System.out.println(s2);
+		
+		
+		for (int i=0;i<s1.length();i++) {
+			if(s1.charAt(i)==' ') {
+				continue;
+			}
+			s3=s3+s1.charAt(i);
+		}
+		System.out.println(s3);
+		
+		
+		
+		int ascii=0;
+		String s4="";
+		String s5="";
+		for(int i=0;i<s2.length();i++) {
+			if(s2.charAt(i)>=65 && s2.charAt(i)<=90) {
+			ascii=s2.charAt(i);
+			ascii=ascii+32;
+			s4=s4+(char)ascii;
+			}
+			else {
+				s4=s4+s2.charAt(i);
+			}
+			
+		}
+		System.out.println(s4);
+		
+		
+		for(int i=0;i<s3.length();i++) {
+			if(s3.charAt(i)>=65 && s3.charAt(i)<=90) {
+			ascii=s3.charAt(i);
+			ascii=ascii+32;
+			s5=s5+(char)ascii;
+			}
+			else {
+				s5=s5+s3.charAt(i);
+			}
+		}
+		System.out.println(s5);
+		
+		
+		char arr1[]=s4.toCharArray();
+		char arr2[]=s5.toCharArray();
+		
+		for(int i=0;i<arr1.length;i++) {
+			for(int j=i+1;j<arr1.length;j++) {
+				if(arr1[i]>arr1[j]) {
+					char ch = arr1[i];
+					arr1[i]=arr1[j];
+					arr1[j]=ch;
+				}
+			}
+		}
+		System.out.println(arr1);
+		
+		
+		for (int i=0;i<arr2.length;i++) {
+			for(int j=i+1;j<arr2.length;j++) {
+				if(arr2[i]>arr2[j]) {
+					char ch1=arr2[i];
+					arr2[i]=arr2[j];
+					arr2[j]=ch1;
+				}
+			}
+		}
+		System.out.println(arr2);
+		
+		if(Arrays.equals(arr1, arr2)) {
+			System.out.println("Given strings are anagram");
+		}
+		else {
+			System.out.println("Given strings are not an anagram");
+		}
+		
+	}
+}
+
+
+6.WAP to implement pangram checking with least inbuilt methods being used.
+-->
+package com.pw.assignment;
+
+
+public class StringAssi {
+
+	public static void main(String[] args) {
+	
+		String s="The Quick Brown Fox Jumps Over Lazy Dog";
+		
+		String s1="";
+		String s2="";
+		int ascii=0;
+		for (int i=0;i<s.length();i++) {
+		
+			if(s.charAt(i)==' ') {
+				continue;
+			}
+			s1=s1+s.charAt(i);
+		}
+		System.out.println(s1);
+		
+		
+		for (int i=0;i<s1.length();i++) {
+			
+			if(s1.charAt(i)>=65 && s1.charAt(i)<=90) {
+				ascii=s1.charAt(i);
+				ascii=ascii+32;
+				s2=s2+(char)ascii;
+			}
+			else {
+				s2=s2+s1.charAt(i);
+			}
+		}
+		System.out.println(s2);
+		
+		
+		char ar[]=s2.toCharArray();
+		
+		int ar1[]=new int [26];
+		
+		for (int i=0;i<ar.length;i++) {
+			ar1[ar[i]-97]++;
+		}
+		
+		
+		boolean flag=false;
+		for (int i=0;i<ar1.length;i++) {
+			if (ar1[i]==0) {
+				System.out.println("Given string is not a pangram");
+				flag=true;
+				break;
+			}
+		}
+		
+		
+		if(flag==false) {
+			System.out.println("Given string is a pangram");
+		}
+	}
+}
+
+
+
+7.WAP to find if string contains all unique characters.
+-->
+package com.pw.assignment;
+
+
+public class StringAssi {
+
+	public static void main(String[] args) {
+
+		String s="Subham";
+		String s1="";
+		int ascii=0;
+		
+		for (int i=0;i<s.length();i++) {
+			if (s.charAt(i)>=65 && s.charAt(i)<=90) {
+				ascii=s.charAt(i);
+				ascii=ascii+32;
+				s1=s1+(char)ascii;
+			}
+			else {
+				s1=s1+s.charAt(i);
+			}
+		}
+		
+		
+		boolean flag=false;
+		for (int i=0;i<s1.length();i++) {
+			for(int j=i+1;j<s1.length();j++) {
+				if(s1.charAt(i)==s1.charAt(j)) {
+					System.out.println("In given string duplicates are present");
+					flag=true;
+					break;
+				}
+			}
+		}
+		
+		if(flag==false) {
+			System.out.println("Given string contains all unique character");
+		}
+	}
+}
+
+
+8.WAP to find the maximum occuring character in a string.
+-->
+package com.pw.assignment;
+
+
+public class StringAssi {
+
+	public static void main(String[] args) {
+
+		
+String s="Sshubhhamssss";
+		String s1="";
+		int ascii=0;
+		
+		for (int i=0;i<s.length();i++) {
+			if(s.charAt(i)>=65 && s.charAt(i)<=90) {
+				ascii=s.charAt(i);
+				ascii=ascii+32;
+				s1=s1+(char)ascii;
+			}
+			else {
+				s1=s1+s.charAt(i);
+			}
+		}
+		
+		char ch[]=s1.toCharArray();
+		
+		int count[]=new int [s1.length()];
+		for(int i=0;i<ch.length;i++) {
+			if(ch[i]!='0') {
+				count[i]=1;
+			
+				for (int j=i+1;j<ch.length;j++) {
+				
+					if (ch[i]==ch[j]) {
+					
+						count[i]++;
+						ch[j]='0';
+					
+					}
+				}
+			}
+				
+			
+		}
+		
+
+		int min=count[0];
+		int max=count[0];
+		char maxChar=ch[0];
+		char minChar=ch[0];
+		
+		for(int i=0;i<count.length;i++) {
+			
+			if(max<count[i]) {
+				max=count[i];
+				maxChar=ch[i];
+			}	
+		}
+
+		System.out.println("Maximum occuring character in the given string is "+"'"+maxChar+"'");
+		
+	}
+
+}
+
+
+
+

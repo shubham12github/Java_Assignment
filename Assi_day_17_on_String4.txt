@@ -1,0 +1,156 @@
+1.What is mutable string in java expalin with an example
+-->Mutable String:-Such string which we are able to modify during the execution of the program and changes made by we are 
+reflected into the current object rather than new object are called as "Mutable String".This string are created with the 
+help of 'StringBuffer' and 'StringBuilder' inbuilt classes in java.
+
+for eg.
+StringBuffer sb=new StringBuffer("Shubham");
+
+sb.append(" Talke");
+
+System.out.println(sb);		// Shubham Talke
+
+here,
+we create the string 'Shubham' by using 'StringBuffer' inbuilt class then append new string i.e.' Talke' in 'sb' this changes
+are reflected in previous string object 'sb' which refers the string 'Shubham' that's why we got output as "Shubham Talke".
+This is possible because of mutable string.
+
+
+2.WAP to reverse a string
+Input:-"PWSKILLS"
+Output:-"SLLIKSPW"
+-->
+
+package com.shubham.core.java;
+
+public class String3 {
+
+	public static void main(String[] args) {
+
+		String s="PWSKILLS";
+		String s1="";
+		
+		String s2=s.substring(2);
+		String s3=s.substring(0, 2);
+		
+		for(int i=s2.length()-1;i>=0;i--) {
+			
+			s1=s1+s2.charAt(i);
+		}
+		
+		for(int i=0;i<s3.length();i++) {
+			
+			s1=s1+s3.charAt(i);
+		}
+		
+		System.out.println(s1);			// SLLIKSPW
+		
+		
+	}
+
+}
+
+
+3.WAP to reverse a sentence while preserving the position
+	Input:-Think Twice
+	Output:-"knihT eciwT"
+-->
+package com.shubham.core.java;
+
+public class String3 {
+
+	public static void main(String[] args) {
+		
+		String s="Think Twice";
+		
+		String str[]=s.split(" ");
+		
+		String s2="";
+		
+		for (int i=0;i<str.length;i++) {
+			
+			String s1=str[i];
+			for (int j=s1.length()-1;j>=0;j--) {
+				
+				s2=s2+s1.charAt(j);
+			}
+			s2=s2+" ";
+		}
+		
+		System.out.println(s2);		// knihT eciwT
+	}
+
+}
+
+
+4.WAP to sort a String Alphabetically
+-->
+package com.shubham.core.java;
+
+public class String3 {
+
+	public static void main(String[] args) {
+		
+		String s="Shubham";
+		
+		int ascii=0;
+		
+		String s1="";
+		
+		for(int i=0;i<s.length();i++) {
+			
+			if(s.charAt(i)>=65 && s.charAt(i)<=90) {
+				
+				ascii=s.charAt(i);
+				ascii=ascii+32;
+				s1=s1+(char)ascii;
+			}
+			else {
+				s1=s1+s.charAt(i);
+			}
+			
+		}
+		
+		String s2="";
+		for (int i=0;i<s1.length();i++) {
+			
+			boolean flag=false;
+			for (int j=i+1;j<s1.length();j++) {
+				
+				if(s1.charAt(i)==s1.charAt(j)) {
+					flag=true;
+					break;
+				}
+				
+			}
+			if(flag==false) {
+				s2=s2+s1.charAt(i);
+			}
+		}
+		
+		
+		char carr[]=s2.toCharArray();
+		
+		for (int i=0;i<carr.length;i++) {
+			
+			for (int j=i+1;j<carr.length;j++) {
+				
+				if(carr[i]>carr[j]) {
+					
+					char ch=carr[i];
+					carr[i]=carr[j];
+					carr[j]=ch;
+				}
+			}
+		}
+		
+		for (int i=0;i<carr.length;i++) {
+		System.out.print(carr[i]);
+		}
+
+	}
+
+}
+
+		
+		
