@@ -1,0 +1,87 @@
+1.Why do you need static keyword in java explain with an example
+-->let's assume a scenario where we want to share some copy of data among the all of the instances of the class then such 
+case we need 'static' keyword without it not possible also when we use static keyword in such case then our java application
+looks more efficient because memory to the static fields will be allocated only once at the time of class loading itself so it 
+is recommended to use 'static' keyword in such case. now to understand whatever i say in above words we take a look on 
+following example:
+
+for eg.
+we have a business requirement where we have to make one java application to provide the loan to the farmer.Basically to make
+such application we need the feilds like Principle amount,Time duration,Simple Interest,Rate of interest likewise....here rate 
+of interest is fixed to all of the farmers who want to took a loan so if we doesn't use 'static' in this case then memory to
+this feild is allocated for every farmer objects but when we use 'static' keyword then memory also save and the data which
+store in the field are share with all farmer objects.so that do this in java we need 'static' keyword.
+
+
+2.What is class loading and how does the java program actually executes.
+-->Class loading is the process loading class file into JVM (Java Virtual Machine) at runtime.it is responsible for loading 
+classes from various sources like a file system,network,databases and make them available to JVM for execution.
+
+The class loading process majorely devided into three steps:
+I.Loading:-In this step all the classes,libraries,packages which is required to JVM for execution purpose are loaded by
+bootstrap loader.Our java application is loaded by application loader and extension class loader also involve in loading 
+process.
+
+II.Linking:-In this step JVM will check the is our application is written by following java standard if not then shows the 
+exception regarding verification.in preparation stage memory to static variable is allocated and then symbolic references are
+resolved.
+
+III.Initialization:-In the initialization phase JVM initialize the static variable with default values and runs a class's 
+static initialization block (if any) then execution starts from 'main' method itself. 
+
+In this way our java program executes.when we have to talk about the execution of java program in a consise way the we can 
+simply say like our '.java' file is converted into byte code i.e. '.class' file with the help of java compiler then this 
+file is loaded into JVM in class loading process as discusssed above.each one have allocate a memory location in the five
+different data area's of the JVM.Interpreter which located in JVM are converted our '.class' file into '.exe'executable file.
+JIT compiler are converted our frequentely running part code into Machine level code and acts as supporting member for
+interpreter.
+
+
+3.can we mark local variable as static?
+-->we can not mark local variable as static.
+
+4.Why is the static block executed before the main method in java?
+-->Execution of our java program is starting from the main method itself but static block are executed at the time of loading
+'.class' file into JVM that's why static block is executed before main method in java.
+
+
+5.Why is a static method also called a class method?
+-->Method which are available at class level are called as 'class methods'.Static methods are also available at class level
+so we can access the static method directly within the same class and by class name outside the class that's why we call it as
+'class method' also.
+
+
+6.What is the use of static block in java?
+-->In java if we want to perform any activity at the time of loading '.class' file then we have to define that activity inside
+a static block because this block is executed at same time.Normally a static block is used to initialize a static variable.
+
+7.Difference between static and instance variables.
+-->Static Variable:-
+I.These variable are created by using static keyword and memory to such variable is allocated only onse at the time of class
+loading itself.
+II.These variables are associated with the class rather than object and accessible in both area's like static and non static
+
+
+Instance variable:- 
+I.These variable are created without static keyword and memory to such variables is allocated every time whenever we make the 
+new instance of the class.
+II.These variables are associated with object rather than class and accessible in non-static area if we want to access it 
+inside a static area then we have to access it using instance of the class only.
+
+
+8.Difference between static and non static members.
+-->Static members:-
+I.At the time of class loading Static members are loaded into JVM before the non-static member and the static variables and 
+blocks are executed at the time of class loading this is not case with non static members.
+II.Inside static area only static members are accessible if we try to access non-static member then it's possible only by 
+using instance of class only.
+III.Static members are associated with the class rather than the object.
+
+
+Non-static members:-
+I.At the time of class loading non-static members are loaded after the loading of static members and also non static variables
+and blocks are executed at the time of object creation itself.
+II.Inside non-static area we are able to call both the members of the class like static and non-static as well.
+III.Non-static members are associated with the instance of the class rather than a class.
+
+
