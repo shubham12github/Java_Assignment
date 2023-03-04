@@ -1,0 +1,175 @@
+1.What is Encapsulation in java? why is it called data hiding?
+-->Binding of data into a single unit is called as 'Encapsulation'.To achieve Encapsulation in java we have to declare instance 
+variable as private and to access such variable we have to define public getter and setter methods so we can access it outside
+the class easily But When we declare any member as private we are unable to access it from outside the class directly it means
+our data are hidden from outside the world no one can manupulate it that's why it is also called as "data hiding".
+
+
+2.What are the important features of Encapsulation?
+-->
+I.We can achieve security.
+II.Enhancement becomes easy.
+III.Maintainability and modularisation becomes easy.
+IV.It provides flexibility to the user to use the system very easily.
+
+
+3.What are getter and setter methods in java explain with an example.
+-->getter methods:- The methods which generally used to fetch the value of the instance variable in java such methods are 
+reffered as getter methods.
+
+setter methods:- The methods which generally used to set the values to the instance variable in java such methods are
+reffered as setter methods
+
+for eg.
+package com.shubham.core.java;
+
+class Student {
+	
+	private int age;
+	
+	public int getAge() {
+		return age;
+	}
+	public void setAge(int age) {
+		this.age = age;
+}
+
+public class Encapsulation3 {
+	
+	public static void main(String[] args) {
+		
+		Student s1=new Student();
+		
+		s1.setAge(18);
+		int s1Age=s1.getAge();
+
+		System.out.println(s1Age);		// 18
+	
+	}
+
+}
+
+
+4.What is the use of this keyword explain with an example.
+-->'this' keyword is used to solve the problem of shadowing.Now to understand the shadowing problem in java let's take a look
+on following example:
+
+package com.shubham.core.java;
+
+class Student {
+	
+	private int age;
+	
+	public int getAge() {
+		return age;
+	}
+	public void setAge(int age) {
+		age = age;
+}
+
+public class Encapsulation3 {
+	
+	public static void main(String[] args) {
+		
+		Student s1=new Student();
+		
+		s1.setAge(18);
+		int s1Age=s1.getAge();
+
+		System.out.println(s1Age);		// 0
+	
+	}
+
+}
+  
+In the above code the name of the loacal variable and instance variable i.e 'age' are same inside the setter method so in such
+case there is name-clash happen so JVM will give the preference to local variable inside method means local variable shadows 
+the instance variable.This situation are reffered as "Shadowing problem" in java.
+here,because of happening such case instance variable are not initialized so we got the output as default value of age.To deal
+with such problem we use 'this' keyword.
+
+
+package com.shubham.core.java;
+
+class Student {
+	
+	private int age;
+	
+	public int getAge() {
+		return age;
+	}
+	public void setAge(int age) {
+		this.age = age;
+}
+
+public class Encapsulation3 {
+	
+	public static void main(String[] args) {
+		
+		Student s1=new Student();
+		
+		s1.setAge(18);
+		int s1Age=s1.getAge();
+
+		System.out.println(s1Age);		// 18
+	
+	}
+
+}
+
+
+here, we use the 'this' keyword so shadowing problem solved and we got the output as '18'.
+
+
+
+5.What is the advantage of Encapsulation?
+-->
+I.We can achieve security.
+II.Enhancement becomes easy.
+III.Maintainability and modularisation becomes easy.
+IV.It provides flexibility to the user to use the system very easily.
+
+
+6.How to achieve Encapsulation in java give an example?
+-->To achieve Encapsulation in java we have to follow the following steps:
+I.Declare the Instance variable as private.
+II.Generate public getter and setter methods to access the instance variable outside the class
+
+for eg.
+
+package com.shubham.core.java;
+
+class Student {
+	
+	private String name;
+	
+	public String getName() {
+		return name;
+	}
+	public void setName(String name) {
+		this.name = name;
+}
+
+public class Encapsulation3 {
+	
+	public static void main(String[] args) {
+		
+		Student s1=new Student();
+		
+		s1.setName("Shubham");
+		String s1Name=s1.getName();
+
+		System.out.println(s1Name);		// Shubham
+	
+	}
+
+}
+
+In this way we can achieve the Encapsulation in java.
+
+
+
+
+
+
+		
