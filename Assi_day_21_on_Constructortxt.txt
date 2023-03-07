@@ -1,0 +1,152 @@
+1.What is a Constructor?
+-->Constructor is the special method in java,basically used to initialize the object.
+Syntax:- class name () {
+		
+			 // code
+
+		 }
+
+2.What is constructor chaining?
+-->Calling of the one constructor inside another constructor termed as "constructor chaining".
+for eg.
+
+class Student {
+
+	Student() {
+		
+		this(10);
+		System.out.println("Zero parameterised constructor.");
+
+	}
+
+	Student(int i) {
+		
+		System.out.println("Constructor which take input parameter as int.");
+
+	}
+
+	public static void main(String []args) {
+
+		Student s= new Student();	
+
+	}
+
+output:-
+Constructor which take input parameter as int.
+Zero parameterised constructor.
+
+here we call the zero parameterised constructor while creating the object but inside it call another constructor which take 
+input parameter as int that's why we got output as above so this is because of the constructor chaining.
+
+
+3.Can we call a subclass constructor from a superclass constructor?
+-->No,We can not call a subclass constructor from superclass constructor.
+
+4.What happens if we keep a return type for a constructor.
+-->If we keep return type for a constructor then JVM will consider it as method.
+
+5.What is no-arg constructor?
+-->The constructor which are defined by programmer and doesn't take any argument such constructor are called as "no-arg 
+constructor".
+for eg.
+class Student {
+
+	Student() {
+
+		System.out.println("no-arg constructor");
+
+	}
+
+	public static void main(String []args) {
+
+		Student s= new Student();
+
+	}
+}
+
+In this way we can define the no-arg constructor.
+
+
+6.How is the no-arg constructor is different from default constructor?
+-->
+No-arg constructor:-
+I.The Consturctor which are defined explicitely by the programmer and which doesn't take any argument are called as "no-arg
+  constructor".
+
+Default constructor:-
+I.The constructor which is invoked by JVM Implicitely when doesn't exist any constructor in program such constructor are 
+  termed as "Default constructor".
+
+
+7.When do we need constructor overloading?
+-->When we have a need to create the several objects in different way of the perticular class on the basis of the requirement
+in such cases we need constructor overloading.
+for eg.
+we have to create two objects one is for initialization of the default values to the instance data members and another for 
+intialization of the user input values to instance data members like below:
+
+class Student {
+
+	private int age;
+	private String name;
+
+	public Student() {
+
+		System.out.println("age = "+age+" "+"name = "+name);
+
+	}
+
+	public Student (int age,String name) {
+
+		this.age=age;
+		this.name=name;
+		System.out.println("age = "+age+" "+"name = "+name);
+
+	}
+
+	public static void main(String []args) {
+
+		Student st1=new Student();
+		Student st2=new Student(10,"Madan");
+
+	}
+
+} 
+
+In Such cases we need constructor overloading.
+		
+		
+8.What is default constructor expalin with an example.
+-->Default Constructor:- Constructor which are invoked by JVM implicitely when no any constructor defined explicitely by the
+prograammer and which does not take any aegument such constructor are called as 'Default constructor'.
+
+for eg.
+
+public class Student {
+
+	private int age;
+
+	void display() {
+
+		System.out.println("Age of the student is "+age);
+
+	}
+
+	public static void main(String []args) {
+
+		Student s=new Student();	// here,we doesn't get any compile time error while we didn't define any constructor
+		
+		// s.add();					// Method Undefined
+
+		s.display();				// 0
+
+	}
+
+}
+
+In the above eg. when we are creating the object class constructor is called but didn't occure any compile time error but 
+this not the case while we invoke the 'add()' method this because of the JVM will insert one class constructor which does
+not take any parameter.
+
+Also here we don't initialize the 'age' variable but when we try to print the value of it we get '0' because this value to 
+'age' is initialized by JVM with the help of the Default constructor.
