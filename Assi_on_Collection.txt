@@ -1,0 +1,91 @@
+1.What is the collection framework in java?
+--> Collection Framework: It is the combination of classes and interfaces,which can be used
+to represent group of individual object as single entity.
+
+2.What is the difference between ArrayList and LinkedList?
+--> ArrayList: 
+I.In ArrayList Insertion operation based on index at any point is possible but not prefferred, 
+  While performing insertion operation based on index  behind the seen shifting is happening 
+  so this is not good approch that's why here index based accessing is not preffered
+III.when our frequent operation is 'retrieving of the data' then ArrayList is recommended 
+    because it implements RandomAccess interface. 
+IV.To store the data in memory arraylist require contiguous memory location similer to array.
+
+LinkedList:
+I.In LinkedList insertion operation based on index at any point is prefferred because behind 
+  the seen data is stored in the form of node and each node is connectd using link so no                  
+  shift operation performed here. 
+II.when our frequent operation is 'Insertion/Deletion' in middle then LinkedList is recommended
+III.It didn't need contiguous memory due to data is stored in the form of node and it will exist 
+    at anywhere where memory is available and connects with each other by the use of link.
+
+
+
+3.What is the difference between Iterator and ListIterator?
+-->
+Iterator:
+I.Iterator traverse over collection only in one direction that is forward direction itself.
+II. it is applicable for traversing over all collection classes.
+
+ListIterator:
+I.It traverse over collection in both direction that is forward as well as reverse direction.
+II.It is applicable for traversing over ArrayList and LinkedList collection classes itself.
+
+
+4.What is the difference between Iterator and Enumeration?
+--> 
+Iterator:
+I.It is used to traverse over newly collection classes as well as Legacy classes.Legacy classes 
+  are such collection classes which released in early versions of the java.
+II.Here hasNext() method is used to check whether next element is available or not and next() method 
+   fetches that element if available.
+
+Enumeration:
+I.It is used to traverse over Legacy collection classes only.
+II.Here hasMoreElements() method is used to check whether next element is available or not and
+   nextElement() method fetches that element if available.
+
+
+5.What is the difference between List and Set?
+-->
+List:
+I.Insertion order is preserved.
+II.Duplicates are allowed.
+III.As many null insertion is possible. 
+IV.It contains single legacy class which is vector class.
+
+Set:
+I.Insertion order not preserved.
+II.Duplicates not allowed.
+III.Single null insertion is possible.
+IV.It does not contain any legacy class.
+
+
+6.What is the difference between Hashset and TreeSet?
+-->
+HashSet:
+I.Single null insertion is possible.
+II.Both Homogeneous as well as Heterogenous data will store.
+III.While retrieving data we can't predict retrieving order due to behind the seen it follows 
+    Hashing algorithm.
+
+TreeSet:
+I.No null insertion possible
+II.only homogenous data is allowed if we try to store heterogeneous data we get 'ClassCasteException'.
+III.While Accessing the data it will accessed in sorted order.
+
+
+7.What is the difference between Array and ArrayList?
+-->
+Array:
+I.Array can store elements of both primitive data tyape as Well as Ojects.
+II.It is fixed in size once created we can't increase/Decrease the size.
+III. Performance is fast as compare to ArraList.
+IV.Least inbuilt methods are available for manupulating the data.
+
+ArrayList:
+I.ArrayList store elements only as Objects.
+II.It is growable in nature.
+III.Performance is low as compare to Array.
+IV.So many inbuilt methods are available for manupulating the data.
+ 
