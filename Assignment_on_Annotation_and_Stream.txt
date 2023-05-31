@@ -1,0 +1,205 @@
+Assignment on Annotation and Stream API
+
+
+1. program to display current date and time in java.
+-->
+package com.date.time.api;
+
+import java.time.LocalDate;
+import java.time.LocalTime;
+//import java.sql.Date;
+import java.util.Date;
+
+public class LaunchDt1 {
+
+	public static void main(String[] args) {
+
+		LocalDate localDate=LocalDate.now();
+		
+		int day=localDate.getDayOfMonth();
+		int month=localDate.getMonthValue();
+		int year=localDate.getYear();
+		
+		System.out.println(day+"/"+month+"/"+year);
+		
+		LocalTime localTime=LocalTime.now();
+		
+		int hour=localTime.getHour();
+		int minute=localTime.getMinute();
+		int second=localTime.getSecond();
+		int nano=localTime.getNano();
+		
+		System.out.println(hour+":"+minute+":"+second+":"+nano);
+		
+		
+		
+		
+	}
+
+}
+
+
+2.Write a program to convert a date to a string in the format "MM/dd/yyyy".
+-->
+package com.date.time.api;
+
+import java.time.LocalDate;
+import java.time.LocalTime;
+import java.time.format.DateTimeFormatter;
+//import java.sql.Date;
+import java.util.Date;
+
+public class LaunchDt1 {
+
+	public static void main(String[] args) {
+
+		LocalDate localDate1=LocalDate.of(2023, 05, 31);
+		DateTimeFormatter dateTimeFormatter=DateTimeFormatter.ofPattern("MM/dd/YYYY");
+		
+		String dateInStringFormat=localDate.format(dateTimeFormatter);
+		
+		System.out.println(dateInStringFormat);				// 05/31/2023
+		
+	}
+
+}
+
+
+3. What is the difference between collections and streams?Explain with an Example.
+-->
+Streams:
+1.It doesn't store data, it operates on source data structures i.e collection
+2.They use functional interfaces like lambda which makes it a good fit for programming langauges.
+3.Java streams are consumable i.e to traverse the stream, it needs to be created everytime.
+4.Java streams supports both sequential and parallel processing.
+5.Streams are iterated internally by just mentioning the operations.
+
+eg.
+package com.collection1;
+
+import java.util.Arrays;
+import java.util.List;
+import java.util.stream.Stream;
+
+public class StreamApi {
+
+	public static void main(String[] args) {
+		
+		List<Integer> list1=Arrays.asList(2,6,7,3,1);
+		 
+		Stream<Integer> streamData=list1.stream();
+		
+		Stream<Integer> filterStream=streamData.filter(n->n%2==0);
+		
+		Stream<Integer> sortedStream=filterStream.sorted();
+		
+		Stream<Integer> mapStream=sortedStream.map(n->n*2); // we can perform any operation on stream using map method
+		
+		mapStream.forEach(n->System.out.println(n));
+		
+	}
+}
+
+
+Collections:
+1.It stores all the data that the data stuctures currently has in a perticular data stucture like Set, List etc.
+2.They don't use functional interfaces.
+3.They are non consumable i.e can be traversable multiple times without creating it again.
+4. It supports parallel processing and parallel processing can be very helpful in achieving high performance.
+5.Collections are iterated externally using loops.
+
+eg.
+package com.maps.generics;
+
+import java.util.ArrayList;
+import java.util.Collections;
+
+
+public class CollectionsClass {
+
+	public static void main(String[] args) {
+		
+		ArrayList al1=new ArrayList();
+		al1.add(100);
+		al1.add(50);
+		al1.add(32);
+		al1.add(120);
+		al1.add(65);
+		
+		System.out.println(al1);
+		
+		Collections.sort(al1);
+		System.out.println(al1);
+		
+	}
+}
+
+
+4. What is enums in java? explain with an example
+
+--> We can use enum to define a group of named constants.
+
+Enums are used to represent a collection of related constants that have a common purpose. Each constant in an 
+enum is an instance of the enum type, and they are typically defined as public static final fields.
+
+Here's an example of how to define an enum in Java:
+
+package com.Enum;
+
+enum Week {
+	
+	MON, TUE,WED,THU,FRI,SAT,SUN;
+
+}
+
+public class Enum1 {
+	
+
+	public static void main(String[] args) {
+		
+		Week w1=Week.MON;
+		System.out.println(w1);
+		
+		int index=w1.ordinal();
+		System.out.println(index);
+		
+		System.out.println(Week.TUE.ordinal());
+		
+		Week []wr=Week.values();
+		for(Week w:wr) {
+			
+			System.out.println(w+":"+w.ordinal());
+			
+		}
+
+	}
+}
+
+Here we define an enum called "Week" that represents the days of the week. The enum has seven 
+constants, each representing a day of the week. The constants are defined in all uppercase letters by convention.
+
+
+5. What are in built annotations in java
+
+--> built-in annotations in Java:
+
+@Override 
+
+@Deprecate
+
+@SuppressWarnings
+
+@FunctionalInterface
+
+@Retention
+
+@Target 
+
+@Documented 
+
+@Inherited 
+
+These built-in annotations in Java are used to provide additional information to the Java compiler and other 
+tools. They help improve code readability, maintainability, and safety by enforcing specific rules and behaviours 
+in Java code.
+
